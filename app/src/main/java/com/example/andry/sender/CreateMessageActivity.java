@@ -38,9 +38,10 @@ public class CreateMessageActivity extends AppCompatActivity {
         //передаем с помощю интента параметры в другую активность
         intent.putExtra(Intent.EXTRA_TEXT,messageText);
 
+        //строковую переменную и привязываем к выбраному строковому ресурсу
         String chosenTitel = getString(R.string.choser);
 
-
+        //создаем интент выбора активности (без выбора по умолчанию)
         Intent chooseIntent = Intent.createChooser(intent,chosenTitel);
 
         //включаем другую активность c выбором интента
